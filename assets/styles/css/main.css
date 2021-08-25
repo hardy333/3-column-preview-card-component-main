@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Big Shoulders Display', cursive;
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', cursive;
+}
+
+button, p {
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 1.6;
+}
+
+*:focus {
+  outline: 2px dashed black;
+  outline-offset: 3px;
+}
+
+.cards {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media screen and (max-width: 860px) {
+  .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.card {
+  padding: 4rem;
+  max-width: 27.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card img {
+  -webkit-user-select: noen;
+     -moz-user-select: noen;
+      -ms-user-select: noen;
+          user-select: noen;
+}
+
+.card h2 {
+  margin: 2.5rem 0rem;
+  font-size: 4rem;
+}
+
+.card p {
+  opacity: 0.6;
+  font-size: 1.4rem;
+}
+
+.card__btn {
+  padding: 1.2rem 2.5rem;
+  margin-top: 6rem;
+  border: none;
+  background-color: #fff;
+  border-radius: 5rem;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+.card:first-child {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.card:last-child {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+@media screen and (max-width: 860px) {
+  .card:first-child {
+    border-radius: 0;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  .card:last-child {
+    border-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .card {
+    padding: 2rem;
+  }
+  .card__btn {
+    padding: 1rem 1.2rem;
+  }
+}
+
+.card--left {
+  background-color: var(--Bright-orange);
+}
+
+.card--left .card__btn {
+  color: var(--Bright-orange);
+}
+
+.card--left .card__btn:hover {
+  background-color: var(--Bright-orange);
+  color: #fff;
+}
+
+.card--left .card__btn:focus {
+  outline-color: #24888f;
+}
+
+.card--middle {
+  background-color: var(--Dark-cyan);
+}
+
+.card--middle .card__btn {
+  color: var(--Dark-cyan);
+}
+
+.card--middle .card__btn:hover {
+  background-color: var(--Dark-cyan);
+  color: #fff;
+}
+
+.card--middle .card__btn:focus {
+  outline-color: var(--Very-dark-cyan);
+}
+
+.card--right {
+  background-color: var(--Very-dark-cyan);
+}
+
+.card--right .card__btn {
+  color: var(--Very-dark-cyan);
+}
+
+.card--right .card__btn:hover {
+  background-color: var(--Very-dark-cyan);
+  color: #fff;
+}
+
+.card--right .card__btn:focus {
+  outline-color: var(--Bright-orange);
+}
+
+@media screen and (max-width: 300px) {
+  .cards {
+    padding: 4rem 1rem;
+  }
+}
